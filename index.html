@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nostem | Personal Website</title>
+  <title>Nostem</title>
+  <!-- React + ReactDOM -->
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Babel for JSX transpilation -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lucide-react@0.263.1/dist/umd/lucide-react.js"></script>
+  <!-- Lucide icons -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { margin: 0; }
+    body { margin: 0; font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; }
   </style>
 </head>
 <body>
@@ -18,7 +22,7 @@
 
   <script type="text/babel">
     const { useState, useMemo } = React;
-    const { Book, Search, Calendar, Star, ArrowLeft } = lucideReact;
+    const { Book, Search, Calendar, Star, ArrowLeft } = lucide;
 
     const PersonalWebsite = () => {
       const [activeSection, setActiveSection] = useState('about');
@@ -72,66 +76,45 @@
 
       if (selectedBook) {
         return (
-          <div className="min-h-screen bg-slate-900" style={{ fontFamily: "'Inter', 'Segoe UI', system-ui, sans-serif" }}>
+          <div className="min-h-screen bg-slate-900 text-slate-200">
             <header className="border-b border-slate-700">
               <div className="max-w-4xl mx-auto px-6 py-8">
-                <button 
-                  onClick={() => setSelectedBook(null)}
-                  className="flex items-center gap-2 text-teal-400 hover:text-teal-300 mb-4"
-                >
-                  <ArrowLeft className="w-4 h-4" />
+                <button onClick={() => setSelectedBook(null)} className="flex items-center gap-2 text-teal-400 hover:text-teal-300 mb-4">
+                  <ArrowLeft size={16} />
                   Back to bookshelf
                 </button>
               </div>
             </header>
-
             <main className="max-w-4xl mx-auto px-6 py-12">
+              {/* Selected book view – same as your original */}
               <div className="grid md:grid-cols-3 gap-8">
                 <div>
-                  <div 
-                    className="w-full aspect-[2/3] rounded-lg shadow-2xl flex items-center justify-center"
-                    style={{ backgroundColor: selectedBook.coverColor }}
-                  >
+                  <div className="w-full aspect-[2/3] rounded-lg shadow-2xl flex items-center justify-center" style={{ backgroundColor: selectedBook.coverColor }}>
                     <div className="text-center p-6">
                       <h3 className="text-white font-bold text-lg mb-2 leading-tight">{selectedBook.title}</h3>
                       <p className="text-white/80 text-sm">{selectedBook.author}</p>
                     </div>
                   </div>
                 </div>
-
                 <div className="md:col-span-2 space-y-6">
                   <div>
-                    <h1 className="text-3xl font-light text-orange-300 mb-2" style={{ color: '#E07A5F' }}>
-                      {selectedBook.title}
-                    </h1>
+                    <h1 className="text-3xl font-light mb-2" style={{ color: '#E07A5F' }}>{selectedBook.title}</h1>
                     <p className="text-xl text-slate-300 mb-4">{selectedBook.author}</p>
-                    
                     <div className="flex gap-6 text-sm text-slate-400 mb-4">
                       <div>Published: {selectedBook.published}</div>
                       <div>Read: {selectedBook.year}</div>
                       <div className="flex items-center gap-1">
-                        Rating:
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-4 h-4 ${i < selectedBook.rating ? 'fill-teal-400 text-teal-400' : 'text-slate-600'}`}
-                          />
+                        Rating: {[...Array(5)].map((_, i) => (
+                          <Star key={i} size={16} className={i < selectedBook.rating ? 'fill-teal-400 text-teal-400' : 'text-slate-600'} />
                         ))}
                       </div>
                     </div>
                   </div>
-
                   <div className="bg-slate-800 border border-slate-700 rounded-lg p-6">
                     <h2 className="text-lg font-medium text-teal-400 mb-4">My Thoughts & Summary</h2>
-                    <textarea
-                      placeholder="Write your thoughts, summaries, and reflections about this book..."
-                      className="w-full h-64 bg-slate-900 border border-slate-700 rounded p-4 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-600 resize-none"
-                      defaultValue={selectedBook.thoughts}
-                    />
+                    <textarea placeholder="Write your thoughts..." className="w-full h-64 bg-slate-900 border border-slate-700 rounded p-4 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-600 resize-none" defaultValue={selectedBook.thoughts} />
                     <div className="flex justify-end mt-4">
-                      <button className="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded transition-colors">
-                        Save Notes
-                      </button>
+                      <button className="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white rounded">Save Notes</button>
                     </div>
                   </div>
                 </div>
@@ -148,11 +131,7 @@
               <h1 className="text-3xl font-light mb-6 text-teal-400" style={{ letterSpacing: '0.02em' }}>Your Name</h1>
               <nav className="flex gap-8">
                 {['about', 'now', 'writing', 'books'].map(section => (
-                  <button 
-                    key={section}
-                    onClick={() => setActiveSection(section)}
-                    className={`pb-1 capitalize transition-colors ${activeSection === section ? 'border-b-2 border-teal-400 text-teal-400' : 'text-slate-400 hover:text-slate-300'}`}
-                  >
+                  <button key={section} onClick={() => setActiveSection(section)} className={`pb-1 capitalize transition-colors ${activeSection === section ? 'border-b-2 border-teal-400 text-teal-400' : 'text-slate-400 hover:text-slate-300'}`}>
                     {section}
                   </button>
                 ))}
@@ -161,32 +140,106 @@
           </header>
 
           <main className="max-w-7xl mx-auto px-6 py-12">
-            {/* About, Now, Writing, Books sections - same as your original, pasted fully for completeness */}
-            {/* (Full sections here - identical to your current code for About/Now/Writing/Bookshelf grid) */}
-            {/* To save space, they are the same as in your repo - just with the rendering fixed by the CDNs above */}
-            
+            {activeSection === 'about' && (
+              <div className="max-w-4xl space-y-6">
+                <h2 className="text-2xl font-light mb-4" style={{ color: '#E07A5F' }}>About</h2>
+                <p className="text-slate-300 leading-relaxed text-lg">
+                  Hello! I am a designer, writer, and reader based somewhere interesting. 
+                  I spend my time building thoughtful products, reading extensively, and 
+                  writing about what I learn.
+                </p>
+                <p className="text-slate-300 leading-relaxed text-lg">
+                  This site is a home for my work and interests. You can find my latest 
+                  projects, writing, and book collection here.
+                </p>
+                <div className="pt-4">
+                  <p className="text-slate-400 text-sm">Connect: 
+                    <a href="#" className="ml-2 text-teal-400 hover:text-teal-300 underline">Twitter</a>
+                    <a href="#" className="ml-2 text-teal-400 hover:text-teal-300 underline">GitHub</a>
+                    <a href="#" className="ml-2 text-teal-400 hover:text-teal-300 underline">Email</a>
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {activeSection === 'now' && (
+              <div className="max-w-4xl space-y-6">
+                <h2 className="text-2xl font-light mb-2" style={{ color: '#E07A5F' }}>Now</h2>
+                <p className="text-slate-400 text-sm mb-6">Updated December 2025</p>
+                <div className="space-y-6">
+                  <div className="bg-slate-800 p-5 rounded-lg border border-slate-700">
+                    <h3 className="font-medium mb-2 text-teal-400">Working on</h3>
+                    <p className="text-slate-300">Building a new project focused on mindful technology use</p>
+                  </div>
+                  <div className="bg-slate-800 p-5 rounded-lg border border-slate-700">
+                    <h3 className="font-medium mb-2 text-teal-400">Reading</h3>
+                    <p className="text-slate-300">Currently making my way through the classics and contemporary fiction</p>
+                  </div>
+                  <div className="bg-slate-800 p-5 rounded-lg border border-slate-700">
+                    <h3 className="font-medium mb-2 text-teal-400">Learning</h3>
+                    <p className="text-slate-300">Exploring generative AI and its applications in creative work</p>
+                  </div>
+                  <div className="bg-slate-800 p-5 rounded-lg border border-slate-700">
+                    <h3 className="font-medium mb-2 text-teal-400">Living</h3>
+                    <p className="text-slate-300">Focusing on deep work, daily walks, and meaningful conversations</p>
+                  </div>
+                </div>
+                <p className="text-slate-400 text-sm pt-6">
+                  Inspired by <a href="https://nownownow.com/about" target="_blank" rel="noopener" className="text-teal-400 hover:text-teal-300 underline">nownownow.com</a>
+                </p>
+              </div>
+            )}
+
+            {activeSection === 'writing' && (
+              <div className="max-w-4xl space-y-6">
+                <h2 className="text-2xl font-light mb-8" style={{ color: '#E07A5F' }}>Writing</h2>
+                <div className="space-y-8">
+                  {writings.map((post, i) => (
+                    <div key={i} className="border-l-2 border-teal-400 pl-6">
+                      <a href={post.link} className="text-xl text-teal-400 hover:text-teal-300">{post.title}</a>
+                      <p className="text-slate-400 text-sm mt-1">{post.date}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {activeSection === 'books' && (
               <div className="space-y-8">
-                <h2 className="text-2xl font-light text-orange-300" style={{ color: '#E07A5F' }}>Bookshelf ({filteredAndSortedBooks.length})</h2>
-                
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                  <h2 className="text-2xl font-light" style={{ color: '#E07A5F' }}>Bookshelf ({filteredAndSortedBooks.length})</h2>
+                  <div className="flex flex-wrap gap-4">
+                    <input type="text" placeholder="Search..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="px-4 py-2 bg-slate-800 border border-slate-700 rounded text-slate-200 focus:outline-none focus:border-teal-400" />
+                    <select value={yearFilter} onChange={e => setYearFilter(e.target.value)} className="px-4 py-2 bg-slate-800 border border-slate-700 rounded text-slate-200">
+                      {years.map(y => <option key={y} value={y}>{y === 'all' ? 'All years' : y}</option>)}
+                    </select>
+                    <select value={ratingFilter} onChange={e => setRatingFilter(e.target.value)} className="px-4 py-2 bg-slate-800 border border-slate-700 rounded text-slate-200">
+                      {ratings.map(r => <option key={r} value={r}>{r === 'all' ? 'All ratings' : `${r} stars`}</option>)}
+                    </select>
+                    <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="px-4 py-2 bg-slate-800 border border-slate-700 rounded text-slate-200">
+                      <option value="title">Title</option>
+                      <option value="author">Author</option>
+                      <option value="year">Year read</option>
+                      <option value="rating">Rating</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                   {filteredAndSortedBooks.map(book => (
                     <button key={book.id} onClick={() => setSelectedBook(book)} className="group">
-                      <div 
-                        className="aspect-[2/3] rounded-lg shadow-lg flex items-center justify-center relative overflow-hidden group-hover:shadow-2xl transition-shadow"
-                        style={{ backgroundColor: book.coverColor }}
-                      >
-                        <div className="text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity bg-black/50 absolute inset-0 flex flex-col justify-center">
-                          <p className="text-white font-medium">{book.title}</p>
-                          <p className="text-white/80 text-sm mt-1">{book.author}</p>
+                      <div className="aspect-[2/3] rounded-lg shadow-lg overflow-hidden relative group-hover:shadow-2xl transition-shadow" style={{ backgroundColor: book.coverColor }}>
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 p-4 text-center">
+                          <p className="text-white font-medium text-sm">{book.title}</p>
+                          <p className="text-white/80 text-xs mt-1">{book.author}</p>
                         </div>
-                        <div className="text-center">
-                          <Book className="w-12 h-12 text-white/50" />
+                        <div className="h-full flex items-center justify-center">
+                          <Book size={48} className="text-white/40" />
                         </div>
                       </div>
-                      <div className="flex items-center justify-center gap-1 mt-2">
+                      <div className="mt-3 flex justify-center gap-0.5">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`w-4 h-4 ${i < book.rating ? 'fill-teal-400 text-teal-400' : 'text-slate-600'}`} />
+                          <Star key={i} size={16} className={i < book.rating ? 'fill-teal-400 text-teal-400' : 'text-slate-600'} />
                         ))}
                       </div>
                     </button>
@@ -194,9 +247,6 @@
                 </div>
               </div>
             )}
-
-            {/* Include the other sections (about, now, writing) here exactly as in your original code */}
-            {/* They render fine once the React is loaded */}
           </main>
         </div>
       );
