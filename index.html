@@ -43,7 +43,7 @@
       </div>
 
       <div class="space-y-6">
-        <h2 class="text-3xl font-light text-teal-400">//NOW//</h2>
+        <h2 class="text-3xl font-light" style="color: #2DD4BF;">//NOW//</h2>
         <p class="text-slate-400 mb-6">Updated December 16, 2025</p>
         <div class="space-y-6">
           <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
@@ -59,9 +59,6 @@
             <p class="text-slate-300">Deep dives into consciousness and metaphysics</p>
           </div>
         </div>
-        <p class="text-slate-400 text-sm pt-6">
-          Inspired by <a href="https://nownownow.com/about" target="_blank" class="text-teal-400 hover:text-teal-300 underline">nownownow.com</a>
-        </p>
       </div>
     </section>
 
@@ -71,11 +68,11 @@
 
       <div class="space-y-10">
         <div>
-          <h3 class="text-2xl font-medium text-teal-400 mb-6">Essays</h3>
-          <div class="space-y-8">
+          <h3 class="text-2xl font-medium" style="color: #C084FC;">Essays</h3>
+          <div class="space-y-8 mt-6">
             <!-- Add your essays here -->
-            <div class="border-l-4 border-teal-400 pl-8">
-              <a href="#" class="text-xl text-teal-400 hover:text-teal-300">Title of Essay 1</a>
+            <div class="border-l-4 border-purple-400 pl-8">
+              <a href="#" class="text-xl text-purple-300 hover:text-purple-200">Title of Essay 1</a>
               <p class="text-slate-400 mt-2">Date</p>
               <p class="text-slate-300 mt-3">Short preview or excerpt...</p>
             </div>
@@ -83,11 +80,11 @@
         </div>
 
         <div>
-          <h3 class="text-2xl font-medium text-teal-400 mb-6">Poems</h3>
-          <div class="space-y-8">
+          <h3 class="text-2xl font-medium" style="color: #C084FC;">Poems</h3>
+          <div class="space-y-8 mt-6">
             <!-- Add your poems here -->
-            <div class="border-l-4 border-teal-400 pl-8">
-              <a href="#" class="text-xl text-teal-400 hover:text-teal-300">Title of Poem 1</a>
+            <div class="border-l-4 border-purple-400 pl-8">
+              <a href="#" class="text-xl text-purple-300 hover:text-purple-200">Title of Poem 1</a>
               <p class="text-slate-400 mt-2">Date</p>
               <p class="text-slate-300 mt-3 italic">First few lines...</p>
             </div>
@@ -95,11 +92,11 @@
         </div>
 
         <div>
-          <h3 class="text-2xl font-medium text-teal-400 mb-6">Random</h3>
-          <div class="space-y-8">
+          <h3 class="text-2xl font-medium" style="color: #C084FC;">Random</h3>
+          <div class="space-y-8 mt-6">
             <!-- Add your random thoughts/notes here -->
-            <div class="border-l-4 border-teal-400 pl-8">
-              <a href="#" class="text-xl text-teal-400 hover:text-teal-300">Random Thought #1</a>
+            <div class="border-l-4 border-purple-400 pl-8">
+              <a href="#" class="text-xl text-purple-300 hover:text-purple-200">Random Thought #1</a>
               <p class="text-slate-400 mt-2">Date</p>
               <p class="text-slate-300 mt-3">Quick idea or observation...</p>
             </div>
@@ -108,58 +105,58 @@
       </div>
     </section>
 
-    <!-- Books (sorted by year read, newest first) -->
+    <!-- Books Overview (grid of covers only) -->
     <section id="books" class="hidden space-y-10">
-      <h2 class="text-3xl font-light" style="color: #E07A5F;">Bookshelf (2)</h2>
+      <h2 class="text-3xl font-light mb-8" style="color: #E07A5F;">Bookshelf (2)</h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-        <!-- Most recent: Becoming Your Own Banker (2025) -->
-        <div class="space-y-6">
-          <img src="https://m.media-amazon.com/images/I/B1e9xJXnfbL._CR0,0,4032,2275_SR684,386_.jpg" alt="Becoming Your Own Banker by R. Nelson Nash" class="w-full aspect-[2/3] object-cover rounded-lg shadow-2xl">
-          <div>
-            <h3 class="text-2xl font-light mb-2" style="color: #E07A5F;">Becoming Your Own Banker</h3>
-            <p class="text-xl text-slate-300 mb-4">R. Nelson Nash</p>
-            <div class="text-slate-400 space-y-1">
-              <div>Published: 2000</div>
-              <div>Read: 2025</div>
-              <div>Rating: ★★★★★</div>
-            </div>
-          </div>
-          <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
-            <h4 class="text-lg font-medium text-teal-400 mb-4">My Thoughts & Summary</h4>
-            <p class="text-slate-300 leading-relaxed">
-              A transformative look at using whole life insurance as your own banking system. Mind-blowing shift in how I view money and control.
-            </p>
-          </div>
-        </div>
+      <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        <!-- Becoming Your Own Banker -->
+        <button onclick="showBookDetail(1)" class="focus:outline-none">
+          <img src="https://m.media-amazon.com/images/I/81AbCHNRvEL._SL1500_.jpg" alt="Becoming Your Own Banker cover" class="w-full rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
+        </button>
 
-        <!-- The Ra Material (2020) -->
-        <div class="space-y-6">
-          <img src="https://m.media-amazon.com/images/S/amzn-author-media-prod/6psqbcre4odup0jm052km34clb._SY600_.jpg" alt="The Ra Material (The Law of One)" class="w-full aspect-[2/3] object-cover rounded-lg shadow-2xl">
-          <div>
-            <h3 class="text-2xl font-light mb-2" style="color: #E07A5F;">The Ra Material (The Law of One)</h3>
-            <p class="text-xl text-slate-300 mb-4">Ra (channeled by Don Elkins, Carla Rueckert, Jim McCarty)</p>
-            <div class="text-slate-400 space-y-1">
-              <div>Published: 1984 (Book I)</div>
-              <div>Read: 2020</div>
-              <div>Rating: ★★★★★</div>
-            </div>
-          </div>
-          <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
-            <h4 class="text-lg font-medium text-teal-400 mb-4">My Thoughts & Summary</h4>
-            <p class="text-slate-300 leading-relaxed">
-              Profound channeled material on unity, densities, and the nature of reality. One of the most impactful spiritual texts I've encountered.
-            </p>
-          </div>
-        </div>
+        <!-- The Ra Material -->
+        <button onclick="showBookDetail(2)" class="focus:outline-none">
+          <img src="https://m.media-amazon.com/images/I/71f6+0s9LZL.jpg" alt="The Ra Material (Law of One) cover" class="w-full rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
+        </button>
+      </div>
+
+      <!-- Individual Book Details (hidden by default) -->
+      <div id="book-detail" class="hidden mt-12 max-w-4xl space-y-8">
+        <!-- Content injected via JS -->
       </div>
     </section>
   </main>
 
   <script>
+    const books = [
+      null, // index 0 placeholder
+      {
+        id: 1,
+        title: "Becoming Your Own Banker",
+        author: "R. Nelson Nash",
+        published: 2000,
+        read: 2025,
+        rating: 5,
+        cover: "https://m.media-amazon.com/images/I/81AbCHNRvEL._SL1500_.jpg",
+        thoughts: "A transformative look at using whole life insurance as your own banking system. Mind-blowing shift in how I view money and control."
+      },
+      {
+        id: 2,
+        title: "The Ra Material (The Law of One)",
+        author: "Ra (channeled by Don Elkins, Carla Rueckert, Jim McCarty)",
+        published: "1984 (Book I)",
+        read: 2020,
+        rating: 5,
+        cover: "https://m.media-amazon.com/images/I/71f6+0s9LZL.jpg",
+        thoughts: "Profound channeled material on unity, densities, and the nature of reality. One of the most impactful spiritual texts I've encountered."
+      }
+    ];
+
     function showSection(section) {
       document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
       document.getElementById(section).classList.remove('hidden');
+      document.getElementById('book-detail').classList.add('hidden'); // Hide detail if switching tabs
       
       // Update active tab
       document.querySelectorAll('nav button').forEach(btn => {
@@ -168,6 +165,40 @@
       });
       event.target.classList.add('border-b-2', 'border-teal-400', 'text-teal-400');
       event.target.classList.remove('text-slate-400', 'hover:text-slate-200');
+    }
+
+    function showBookDetail(bookId) {
+      const book = books[bookId];
+      const detail = document.getElementById('book-detail');
+      detail.innerHTML = `
+        <button onclick="document.getElementById('book-detail').classList.add('hidden')" class="flex items-center gap-2 text-teal-400 hover:text-teal-300 mb-6">
+          ← Back to bookshelf
+        </button>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <img src="${book.cover}" alt="${book.title} cover" class="w-full aspect-[2/3] object-cover rounded-lg shadow-2xl">
+          </div>
+          <div class="md:col-span-2 space-y-8">
+            <div>
+              <h3 class="text-4xl font-light mb-3" style="color: #FBBF24;">${book.title}</h3>
+              <p class="text-2xl text-slate-300 mb-6">${book.author}</p>
+              <div class="flex flex-wrap gap-6 text-slate-400">
+                <div>Published: ${book.published}</div>
+                <div>Read: ${book.read}</div>
+                <div class="flex items-center gap-1">
+                  Rating: ${'★'.repeat(book.rating)}${'☆'.repeat(5 - book.rating)}
+                </div>
+              </div>
+            </div>
+            <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+              <h4 class="text-xl font-medium mb-4" style="color: #34D399;">My Thoughts & Summary</h4>
+              <p class="text-slate-300 leading-relaxed">${book.thoughts}</p>
+            </div>
+          </div>
+        </div>
+      `;
+      detail.classList.remove('hidden');
+      window.scrollTo(0, 0);
     }
 
     // Start on About
