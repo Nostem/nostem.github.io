@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nostem Koempassu</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons.css">
   <style>
     body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; margin: 0; }
   </style>
@@ -16,7 +15,6 @@
       <h1 class="text-3xl font-light mb-6 text-teal-400" style="letter-spacing: 0.02em;">Nostem Koempassu</h1>
       <nav class="flex gap-8">
         <button onclick="showSection('about')" class="pb-2 capitalize transition-all border-b-2 border-teal-400 text-teal-400">about</button>
-        <button onclick="showSection('now')" class="pb-2 capitalize transition-all text-slate-400 hover:text-slate-200">now</button>
         <button onclick="showSection('writing')" class="pb-2 capitalize transition-all text-slate-400 hover:text-slate-200">writing</button>
         <button onclick="showSection('books')" class="pb-2 capitalize transition-all text-slate-400 hover:text-slate-200">books</button>
       </nav>
@@ -24,42 +22,47 @@
   </header>
 
   <main class="max-w-7xl mx-auto px-6 py-12">
-    <!-- About -->
-    <section id="about" class="max-w-4xl space-y-8">
-      <h2 class="text-3xl font-light" style="color: #E07A5F;">About</h2>
-      <p class="text-lg leading-relaxed text-slate-300">
-        Hello! I'm Nostem Koempassu — builder, thinker, and explorer of ideas around finance, systems, and personal sovereignty.
-      </p>
-      <p class="text-lg leading-relaxed text-slate-300">
-        This is my digital homestead: a living collection of what I'm reading, writing, and working on.
-      </p>
-      <div>
-        <p class="text-slate-400 mb-2">Connect with me:</p>
-        <div class="flex gap-6">
-          <a href="https://x.com/TheAl_Mo" class="text-teal-400 hover:text-teal-300 underline">@TheAl_Mo on X</a>
-          <a href="https://github.com/Nostem" class="text-teal-400 hover:text-teal-300 underline">GitHub</a>
-          <a href="mailto:your@email.com" class="text-teal-400 hover:text-teal-300 underline">Email</a>
+    <!-- About (with Currently section) -->
+    <section id="about" class="max-w-4xl space-y-12">
+      <div class="space-y-8">
+        <h2 class="text-3xl font-light" style="color: #E07A5F;">About</h2>
+        <p class="text-lg leading-relaxed text-slate-300">
+          Hello! I'm Nostem Koempassu — builder, thinker, and explorer of ideas around finance, systems, and personal sovereignty.
+        </p>
+        <p class="text-lg leading-relaxed text-slate-300">
+          This is my digital homestead: a living collection of what I'm reading, writing, and working on.
+        </p>
+        <div>
+          <p class="text-slate-400 mb-2">Connect with me:</p>
+          <div class="flex gap-6">
+            <a href="https://x.com/TheAl_Mo" class="text-teal-400 hover:text-teal-300 underline">@TheAl_Mo on X</a>
+            <a href="https://github.com/Nostem" class="text-teal-400 hover:text-teal-300 underline">GitHub</a>
+            <a href="mailto:your@email.com" class="text-teal-400 hover:text-teal-300 underline">Email</a>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Now -->
-    <section id="now" class="hidden max-w-4xl space-y-8">
-      <h2 class="text-3xl font-light" style="color: #E07A5F;">Now</h2>
-      <p class="text-slate-400 mb-6">Updated December 16, 2025</p>
       <div class="space-y-6">
-        <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-          <h3 class="font-medium mb-2 text-teal-400">Currently exploring</h3>
-          <p class="text-slate-300">Infinite Banking Concept and private financial systems</p>
+        <h2 class="text-3xl font-light" style="color: #E07A5F;">Currently</h2>
+        <p class="text-slate-400 mb-6">Updated December 16, 2025</p>
+        <div class="space-y-6">
+          <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+            <h3 class="font-medium mb-2 text-teal-400">Exploring</h3>
+            <p class="text-slate-300">Infinite Banking Concept and private financial systems</p>
+          </div>
+          <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+            <h3 class="font-medium mb-2 text-teal-400">Building</h3>
+            <p class="text-slate-300">This personal site and other side projects</p>
+          </div>
+          <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+            <h3 class="font-medium mb-2 text-teal-400">Reading</h3>
+            <p class="text-slate-300">Deep dives into consciousness and metaphysics</p>
+          </div>
         </div>
-        <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-          <h3 class="font-medium mb-2 text-teal-400">Building</h3>
-          <p class="text-slate-300">This personal site and other side projects</p>
-        </div>
+        <p class="text-slate-400 text-sm pt-6">
+          Inspired by <a href="https://nownownow.com/about" target="_blank" class="text-teal-400 hover:text-teal-300 underline">nownownow.com</a>
+        </p>
       </div>
-      <p class="text-slate-400 text-sm pt-6">
-        Inspired by <a href="https://nownownow.com/about" target="_blank" class="text-teal-400 hover:text-teal-300 underline">nownownow.com</a>
-      </p>
     </section>
 
     <!-- Writing -->
@@ -74,32 +77,50 @@
       </div>
     </section>
 
-    <!-- Books -->
+    <!-- Books Grid -->
     <section id="books" class="hidden space-y-10">
-      <h2 class="text-3xl font-light" style="color: #E07A5F;">Bookshelf (1)</h2>
-      
-      <div class="grid md:grid-cols-3 gap-8 items-start">
-        <div>
+      <h2 class="text-3xl font-light" style="color: #E07A5F;">Bookshelf (2)</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <!-- Book 1: Becoming Your Own Banker -->
+        <div class="space-y-6">
           <img src="https://m.media-amazon.com/images/I/81AbCHNRvEL._SL1500_.jpg" alt="Becoming Your Own Banker by R. Nelson Nash" class="w-full aspect-[2/3] object-cover rounded-lg shadow-2xl">
-        </div>
-        <div class="md:col-span-2 space-y-8">
           <div>
-            <h3 class="text-4xl font-light mb-3" style="color: #E07A5F;">Becoming Your Own Banker: Unlock the Infinite Banking Concept</h3>
-            <p class="text-2xl text-slate-300 mb-6">R. Nelson Nash</p>
-            <div class="flex flex-wrap gap-6 text-slate-400">
+            <h3 class="text-2xl font-light mb-2" style="color: #E07A5F;">Becoming Your Own Banker</h3>
+            <p class="text-xl text-slate-300 mb-4">R. Nelson Nash</p>
+            <div class="text-slate-400 space-y-1">
               <div>Published: 2000</div>
               <div>Read: 2025</div>
-              <div class="flex items-center gap-1">
-                Rating: ★★★★★
-              </div>
+              <div>Rating: ★★★★★</div>
             </div>
           </div>
           <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
-            <h4 class="text-xl font-medium text-teal-400 mb-4">My Thoughts & Summary</h4>
-            <textarea id="book-notes" placeholder="Your reflections, key takeaways, quotes... (saved in your browser)" class="w-full h-80 bg-slate-900 border border-slate-700 rounded p-4 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-teal-500 resize-none"></textarea>
-            <div class="flex justify-end mt-4">
-              <button onclick="saveNotes()" class="px-6 py-3 bg-teal-600 hover:bg-teal-700 text-white rounded transition-colors">Save Notes</button>
+            <h4 class="text-lg font-medium text-teal-400 mb-4">My Thoughts & Summary</h4>
+            <p class="text-slate-300 leading-relaxed">
+              <!-- Add your permanent notes here -->
+              A transformative look at using whole life insurance as your own banking system. Mind-blowing shift in how I view money and control.
+            </p>
+          </div>
+        </div>
+
+        <!-- Book 2: The Ra Material (Law of One) -->
+        <div class="space-y-6">
+          <img src="https://schifferbooks.com/cdn/shop/products/9780764360213.jpg?v=1600106683" alt="The Ra Material: The Law of One" class="w-full aspect-[2/3] object-cover rounded-lg shadow-2xl">
+          <div>
+            <h3 class="text-2xl font-light mb-2" style="color: #E07A5F;">The Ra Material (The Law of One)</h3>
+            <p class="text-xl text-slate-300 mb-4">Ra (channeled by Don Elkins, Carla Rueckert, Jim McCarty)</p>
+            <div class="text-slate-400 space-y-1">
+              <div>Published: 1984 (Book I)</div>
+              <div>Read: 2020</div>
+              <div>Rating: ★★★★★</div>
             </div>
+          </div>
+          <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
+            <h4 class="text-lg font-medium text-teal-400 mb-4">My Thoughts & Summary</h4>
+            <p class="text-slate-300 leading-relaxed">
+              <!-- Add your permanent notes here -->
+              Profound channeled material on unity, densities, and the nature of reality. One of the most impactful spiritual texts I've encountered.
+            </p>
           </div>
         </div>
       </div>
@@ -107,37 +128,21 @@
   </main>
 
   <script>
-    // Tab switching
     function showSection(section) {
       document.querySelectorAll('section').forEach(s => s.classList.add('hidden'));
       document.getElementById(section).classList.remove('hidden');
       
-      // Update active tab styling
+      // Update active tab
       document.querySelectorAll('nav button').forEach(btn => {
         btn.classList.remove('border-teal-400', 'text-teal-400');
         btn.classList.add('text-slate-400', 'hover:text-slate-200');
       });
       event.target.classList.add('border-b-2', 'border-teal-400', 'text-teal-400');
       event.target.classList.remove('text-slate-400', 'hover:text-slate-200');
-      
-      // Load notes if switching to books
-      if (section === 'books') loadNotes();
-    }
-
-    // Persistent notes
-    function loadNotes() {
-      const notes = localStorage.getItem('infinite_banking_notes') || '';
-      document.getElementById('book-notes').value = notes;
-    }
-
-    function saveNotes() {
-      const notes = document.getElementById('book-notes').value;
-      localStorage.setItem('infinite_banking_notes', notes);
-      alert('Notes saved!');
     }
 
     // Start on About
-    showSection('about');
+    document.addEventListener('DOMContentLoaded', () => showSection('about'));
   </script>
 </body>
 </html>
