@@ -4,14 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nostem</title>
-  <!-- React + ReactDOM -->
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <!-- Babel for JSX transpilation -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <!-- Lucide icons -->
   <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { margin: 0; font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; }
@@ -86,7 +82,6 @@
               </div>
             </header>
             <main className="max-w-4xl mx-auto px-6 py-12">
-              {/* Selected book view – same as your original */}
               <div className="grid md:grid-cols-3 gap-8">
                 <div>
                   <div className="w-full aspect-[2/3] rounded-lg shadow-2xl flex items-center justify-center" style={{ backgroundColor: selectedBook.coverColor }}>
@@ -128,7 +123,7 @@
         <div className="min-h-screen bg-slate-900 text-slate-200">
           <header className="border-b border-slate-700">
             <div className="max-w-7xl mx-auto px-6 py-8">
-              <h1 className="text-3xl font-light mb-6 text-teal-400" style={{ letterSpacing: '0.02em' }}>Your Name</h1>
+              <h1 className="text-3xl font-light mb-6 text-teal-400" style={{ letterSpacing: '0.02em' }}>Nostem</h1>
               <nav className="flex gap-8">
                 {['about', 'now', 'writing', 'books'].map(section => (
                   <button key={section} onClick={() => setActiveSection(section)} className={`pb-1 capitalize transition-colors ${activeSection === section ? 'border-b-2 border-teal-400 text-teal-400' : 'text-slate-400 hover:text-slate-300'}`}>
@@ -144,20 +139,18 @@
               <div className="max-w-4xl space-y-6">
                 <h2 className="text-2xl font-light mb-4" style={{ color: '#E07A5F' }}>About</h2>
                 <p className="text-slate-300 leading-relaxed text-lg">
-                  Hello! I am a designer, writer, and reader based somewhere interesting. 
-                  I spend my time building thoughtful products, reading extensively, and 
-                  writing about what I learn.
+                  Hello! I'm Nostem — a designer, builder, and lifelong learner.
                 </p>
                 <p className="text-slate-300 leading-relaxed text-lg">
-                  This site is a home for my work and interests. You can find my latest 
-                  projects, writing, and book collection here.
+                  This is my digital homestead: a place for my thoughts, reading, and projects.
                 </p>
                 <div className="pt-4">
-                  <p className="text-slate-400 text-sm">Connect: 
-                    <a href="#" className="ml-2 text-teal-400 hover:text-teal-300 underline">Twitter</a>
-                    <a href="#" className="ml-2 text-teal-400 hover:text-teal-300 underline">GitHub</a>
-                    <a href="#" className="ml-2 text-teal-400 hover:text-teal-300 underline">Email</a>
-                  </p>
+                  <p className="text-slate-400 text-sm">Connect:</p>
+                  <div className="flex gap-4 mt-2">
+                    <a href="#" className="text-teal-400 hover:text-teal-300 underline">Twitter/X</a>
+                    <a href="#" className="text-teal-400 hover:text-teal-300 underline">GitHub</a>
+                    <a href="mailto:your@email.com" className="text-teal-400 hover:text-teal-300 underline">Email</a>
+                  </div>
                 </div>
               </div>
             )}
@@ -169,19 +162,15 @@
                 <div className="space-y-6">
                   <div className="bg-slate-800 p-5 rounded-lg border border-slate-700">
                     <h3 className="font-medium mb-2 text-teal-400">Working on</h3>
-                    <p className="text-slate-300">Building a new project focused on mindful technology use</p>
+                    <p className="text-slate-300">Personal projects and exploring new ideas</p>
                   </div>
                   <div className="bg-slate-800 p-5 rounded-lg border border-slate-700">
                     <h3 className="font-medium mb-2 text-teal-400">Reading</h3>
-                    <p className="text-slate-300">Currently making my way through the classics and contemporary fiction</p>
+                    <p className="text-slate-300">Classics and thought-provoking non-fiction</p>
                   </div>
                   <div className="bg-slate-800 p-5 rounded-lg border border-slate-700">
                     <h3 className="font-medium mb-2 text-teal-400">Learning</h3>
-                    <p className="text-slate-300">Exploring generative AI and its applications in creative work</p>
-                  </div>
-                  <div className="bg-slate-800 p-5 rounded-lg border border-slate-700">
-                    <h3 className="font-medium mb-2 text-teal-400">Living</h3>
-                    <p className="text-slate-300">Focusing on deep work, daily walks, and meaningful conversations</p>
+                    <p className="text-slate-300">AI, design systems, and intentional living</p>
                   </div>
                 </div>
                 <p className="text-slate-400 text-sm pt-6">
@@ -209,7 +198,7 @@
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                   <h2 className="text-2xl font-light" style={{ color: '#E07A5F' }}>Bookshelf ({filteredAndSortedBooks.length})</h2>
                   <div className="flex flex-wrap gap-4">
-                    <input type="text" placeholder="Search..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="px-4 py-2 bg-slate-800 border border-slate-700 rounded text-slate-200 focus:outline-none focus:border-teal-400" />
+                    <input type="text" placeholder="Search titles or authors..." value={searchQuery} onChange={e => setSearchQuery(e.target.value)} className="px-4 py-2 bg-slate-800 border border-slate-700 rounded text-slate-200 focus:outline-none focus:border-teal-400 w-64" />
                     <select value={yearFilter} onChange={e => setYearFilter(e.target.value)} className="px-4 py-2 bg-slate-800 border border-slate-700 rounded text-slate-200">
                       {years.map(y => <option key={y} value={y}>{y === 'all' ? 'All years' : y}</option>)}
                     </select>
@@ -217,17 +206,17 @@
                       {ratings.map(r => <option key={r} value={r}>{r === 'all' ? 'All ratings' : `${r} stars`}</option>)}
                     </select>
                     <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="px-4 py-2 bg-slate-800 border border-slate-700 rounded text-slate-200">
-                      <option value="title">Title</option>
-                      <option value="author">Author</option>
-                      <option value="year">Year read</option>
-                      <option value="rating">Rating</option>
+                      <option value="title">Sort by Title</option>
+                      <option value="author">Sort by Author</option>
+                      <option value="year">Sort by Year Read</option>
+                      <option value="rating">Sort by Rating</option>
                     </select>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                   {filteredAndSortedBooks.map(book => (
-                    <button key={book.id} onClick={() => setSelectedBook(book)} className="group">
+                    <button key={book.id} onClick={() => setSelectedBook(book)} className="group focus:outline-none">
                       <div className="aspect-[2/3] rounded-lg shadow-lg overflow-hidden relative group-hover:shadow-2xl transition-shadow" style={{ backgroundColor: book.coverColor }}>
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 p-4 text-center">
                           <p className="text-white font-medium text-sm">{book.title}</p>
