@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-slate-900 text-slate-200 min-h-screen">
+<html lang="en" class="bg-[#f8f2e8] text-[#4a3c2b] min-h-screen">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nostem Koempassu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; margin: 0; }
+    body { 
+      font-family: 'Libre Baskerville', serif; 
+      margin: 0; 
+      background-image: url('https://media.istockphoto.com/id/1180686896/photo/recycled-paper-texture-background-in-yellow-cream-color-tone.jpg?s=612x612&w=0&k=20&c=uFWDe3uukosNEqV04cBHDpzsrQBVYALdvZUxwznV0jc='); 
+      background-repeat: repeat; 
+      background-size: auto; 
+      opacity: 1; /* Adjust for subtlety if needed */
+    }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+    /* Custom warm shadows */
+    .warm-shadow { box-shadow: 0 4px 20px rgba(139, 111, 71, 0.2); }
+    /* Dividers */
+    hr.divider { border: 0; height: 1px; background: #e8dcc9; margin: 2rem 0; }
   </style>
 </head>
 <body>
-  <header class="border-b border-slate-700">
+  <header class="border-b border-[#e8dcc9]">
     <div class="max-w-7xl mx-auto px-6 py-8">
-      <h1 class="text-3xl font-light mb-6 text-teal-400" style="letter-spacing: 0.02em;">Nostem Koempassu</h1>
+      <h1 class="text-3xl font-light mb-6 text-[#b89b72]" style="letter-spacing: 0.02em;">Nostem Koempassu</h1>
       <nav class="flex gap-8">
-        <button onclick="showSection('about')" class="pb-2 capitalize transition-all border-b-2 border-teal-400 text-teal-400">about</button>
-        <button onclick="showSection('writing')" class="pb-2 capitalize transition-all text-slate-400 hover:text-slate-200">writing</button>
-        <button onclick="showSection('books')" class="pb-2 capitalize transition-all text-slate-400 hover:text-slate-200">books</button>
+        <button onclick="showSection('about')" class="pb-2 capitalize transition-all border-b-2 border-[#b89b72] text-[#b89b72]">about</button>
+        <button onclick="showSection('writing')" class="pb-2 capitalize transition-all text-[#8b6f47] hover:text-[#5e4a3a]">writing</button>
+        <button onclick="showSection('books')" class="pb-2 capitalize transition-all text-[#8b6f47] hover:text-[#5e4a3a]">books</button>
       </nav>
     </div>
   </header>
@@ -25,38 +38,40 @@
     <!-- About with //NOW// subheading -->
     <section id="about" class="max-w-4xl space-y-12">
       <div class="space-y-8">
-        <h2 class="text-3xl font-light" style="color: #E07A5F;">About</h2>
-        <p class="text-lg leading-relaxed text-slate-300">
+        <h2 class="text-3xl font-light" style="color: #8b6f47;">About</h2>
+        <p class="text-lg leading-relaxed text-[#4a3c2b]">
           Hello! I'm Nostem Koempassu — builder, thinker, and explorer of ideas around finance, systems, and personal sovereignty.
         </p>
-        <p class="text-lg leading-relaxed text-slate-300">
+        <p class="text-lg leading-relaxed text-[#4a3c2b]">
           This is my digital homestead: a living collection of what I'm reading, writing, and working on.
         </p>
         <div>
-          <p class="text-slate-400 mb-2">Connect with me:</p>
+          <p class="text-[#8b6f47] mb-2">Connect with me:</p>
           <div class="flex gap-6">
-            <a href="https://x.com/TheAl_Mo" class="text-teal-400 hover:text-teal-300 underline">@TheAl_Mo on X</a>
-            <a href="https://github.com/Nostem" class="text-teal-400 hover:text-teal-300 underline">GitHub</a>
-            <a href="mailto:your@email.com" class="text-teal-400 hover:text-teal-300 underline">Email</a>
+            <a href="https://x.com/TheAl_Mo" class="text-[#b89b72] hover:text-[#8b6f47] underline">@TheAl_Mo on X</a>
+            <a href="https://github.com/Nostem" class="text-[#b89b72] hover:text-[#8b6f47] underline">GitHub</a>
+            <a href="mailto:your@email.com" class="text-[#b89b72] hover:text-[#8b6f47] underline">Email</a>
           </div>
         </div>
       </div>
 
+      <hr class="divider">
+
       <div class="space-y-6">
-        <h2 class="text-3xl font-light" style="color: #E07A5F;">//Now//</h2>
-        <p class="text-slate-400 mb-6">Updated December 16, 2025</p>
+        <h2 class="text-3xl font-light" style="color: #8b6f47;">//Now//</h2>
+        <p class="text-[#8b6f47] mb-6">Updated December 16, 2025</p>
         <div class="space-y-6">
-          <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-            <h3 class="font-medium mb-2 text-teal-400">Exploring</h3>
-            <p class="text-slate-300">Infinite Banking Concept and private financial systems</p>
+          <div class="bg-[#f5f0e6] p-6 rounded-lg border border-[#e8dcc9] warm-shadow">
+            <h3 class="font-medium mb-2 text-[#b89b72]">Exploring</h3>
+            <p class="text-[#4a3c2b]">Infinite Banking Concept and private financial systems</p>
           </div>
-          <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-            <h3 class="font-medium mb-2 text-teal-400">Building</h3>
-            <p class="text-slate-300">This personal site and other side projects</p>
+          <div class="bg-[#f5f0e6] p-6 rounded-lg border border-[#e8dcc9] warm-shadow">
+            <h3 class="font-medium mb-2 text-[#b89b72]">Building</h3>
+            <p class="text-[#4a3c2b]">This personal site and other side projects</p>
           </div>
-          <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
-            <h3 class="font-medium mb-2 text-teal-400">Reading</h3>
-            <p class="text-slate-300">Deep dives into consciousness and metaphysics</p>
+          <div class="bg-[#f5f0e6] p-6 rounded-lg border border-[#e8dcc9] warm-shadow">
+            <h3 class="font-medium mb-2 text-[#b89b72]">Reading</h3>
+            <p class="text-[#4a3c2b]">Deep dives into consciousness and metaphysics</p>
           </div>
         </div>
       </div>
@@ -64,49 +79,49 @@
 
     <!-- Writing with Tile Categories -->
     <section id="writing" class="hidden space-y-12">
-      <h2 class="text-3xl font-light mb-10" style="color: #E07A5F;">Writing</h2>
+      <h2 class="text-3xl font-light mb-10" style="color: #8b6f47;">Writing</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Essays Tile -->
-        <div class="bg-slate-800 border border-slate-700 rounded-xl p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300">
-          <h3 class="text-2xl font-medium mb-2" style="color: #C084FC;">Essays</h3>
-          <p class="text-slate-400 mb-1 text-sm">3 posts</p>
-          <p class="text-slate-300 mb-6 text-sm">Longer-form thoughts on systems, finance, consciousness, and building.</p>
+        <div class="bg-[#f5f0e6] border border-[#e8dcc9] rounded-xl p-8 hover:warm-shadow hover:scale-105 transition-all duration-300 warm-shadow">
+          <h3 class="text-2xl font-medium mb-2" style="color: #c68a6e;">Essays</h3>
+          <p class="text-[#8b6f47] mb-1 text-sm">3 posts</p>
+          <p class="text-[#4a3c2b] mb-6 text-sm">Longer-form thoughts on systems, finance, consciousness, and building.</p>
           <div class="space-y-6">
             <!-- Example posts -->
-            <div class="border-l-4 border-purple-400 pl-6">
-              <a href="#" class="text-lg text-purple-300 hover:text-purple-200">Title of Essay 1</a>
-              <p class="text-slate-400 text-sm mt-1">Date</p>
+            <div class="border-l-4 border-[#c68a6e] pl-6">
+              <a href="#" class="text-lg text-[#c68a6e] hover:text-[#8b6f47]">Title of Essay 1</a>
+              <p class="text-[#8b6f47] text-sm mt-1">Date</p>
             </div>
             <!-- Add more here -->
           </div>
         </div>
 
         <!-- Poems Tile -->
-        <div class="bg-slate-800 border border-slate-700 rounded-xl p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300">
-          <h3 class="text-2xl font-medium mb-2" style="color: #C084FC;">Poems</h3>
-          <p class="text-slate-400 mb-1 text-sm">2 posts</p>
-          <p class="text-slate-300 mb-6 text-sm">Expressions in verse — reflections on life, nature, and the unseen.</p>
+        <div class="bg-[#f5f0e6] border border-[#e8dcc9] rounded-xl p-8 hover:warm-shadow hover:scale-105 transition-all duration-300 warm-shadow">
+          <h3 class="text-2xl font-medium mb-2" style="color: #c68a6e;">Poems</h3>
+          <p class="text-[#8b6f47] mb-1 text-sm">2 posts</p>
+          <p class="text-[#4a3c2b] mb-6 text-sm">Expressions in verse — reflections on life, nature, and the unseen.</p>
           <div class="space-y-6">
             <!-- Example posts -->
-            <div class="border-l-4 border-purple-400 pl-6">
-              <a href="#" class="text-lg text-purple-300 hover:text-purple-200">Title of Poem 1</a>
-              <p class="text-slate-400 text-sm mt-1">Date</p>
+            <div class="border-l-4 border-[#c68a6e] pl-6">
+              <a href="#" class="text-lg text-[#c68a6e] hover:text-[#8b6f47]">Title of Poem 1</a>
+              <p class="text-[#8b6f47] text-sm mt-1">Date</p>
             </div>
             <!-- Add more here -->
           </div>
         </div>
 
         <!-- Random Tile -->
-        <div class="bg-slate-800 border border-slate-700 rounded-xl p-8 hover:shadow-2xl hover:scale-105 transition-all duration-300">
-          <h3 class="text-2xl font-medium mb-2" style="color: #C084FC;">Random</h3>
-          <p class="text-slate-400 mb-1 text-sm">5 posts</p>
-          <p class="text-slate-300 mb-6 text-sm">Quick notes, ideas, observations, and fleeting thoughts.</p>
+        <div class="bg-[#f5f0e6] border border-[#e8dcc9] rounded-xl p-8 hover:warm-shadow hover:scale-105 transition-all duration-300 warm-shadow">
+          <h3 class="text-2xl font-medium mb-2" style="color: #c68a6e;">Random</h3>
+          <p class="text-[#8b6f47] mb-1 text-sm">5 posts</p>
+          <p class="text-[#4a3c2b] mb-6 text-sm">Quick notes, ideas, observations, and fleeting thoughts.</p>
           <div class="space-y-6">
             <!-- Example posts -->
-            <div class="border-l-4 border-purple-400 pl-6">
-              <a href="#" class="text-lg text-purple-300 hover:text-purple-200">Random Thought #1</a>
-              <p class="text-slate-400 text-sm mt-1">Date</p>
+            <div class="border-l-4 border-[#c68a6e] pl-6">
+              <a href="#" class="text-lg text-[#c68a6e] hover:text-[#8b6f47]">Random Thought #1</a>
+              <p class="text-[#8b6f47] text-sm mt-1">Date</p>
             </div>
             <!-- Add more here -->
           </div>
@@ -116,17 +131,17 @@
 
     <!-- Books Overview (grid of covers only) -->
     <section id="books" class="hidden space-y-10">
-      <h2 class="text-3xl font-light mb-8" style="color: #E07A5F;">Bookshelf (2)</h2>
+      <h2 class="text-3xl font-light mb-8" style="color: #8b6f47;">Bookshelf (2)</h2>
 
       <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
         <!-- Becoming Your Own Banker -->
         <button onclick="showBookDetail(1)" class="focus:outline-none">
-          <img src="https://m.media-amazon.com/images/I/81AbCHNRvEL._SL1500_.jpg" alt="Becoming Your Own Banker cover" class="w-full rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
+          <img src="https://m.media-amazon.com/images/I/81AbCHNRvEL._SL1500_.jpg" alt="Becoming Your Own Banker cover" class="w-full rounded-lg warm-shadow hover:warm-shadow hover:scale-105 transition-all duration-300" style="filter: sepia(0.3);">
         </button>
 
         <!-- The Ra Material -->
         <button onclick="showBookDetail(2)" class="focus:outline-none">
-          <img src="https://m.media-amazon.com/images/I/71YBS+FBNLL._SL1500_.jpg" alt="The Ra Material (Law of One) cover" class="w-full rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
+          <img src="https://m.media-amazon.com/images/I/71YBS+FBNLL._SL1500_.jpg" alt="The Ra Material (Law of One) cover" class="w-full rounded-lg warm-shadow hover:warm-shadow hover:scale-105 transition-all duration-300" style="filter: sepia(0.3);">
         </button>
       </div>
 
@@ -136,6 +151,10 @@
       </div>
     </section>
   </main>
+
+  <footer class="border-t border-[#e8dcc9] py-6 text-center text-[#8b6f47] text-sm">
+    © 2025 Nostem Koempassu. Built with curiosity.
+  </footer>
 
   <script>
     const books = [
@@ -168,29 +187,29 @@
       document.getElementById('book-detail').classList.add('hidden');
       
       document.querySelectorAll('nav button').forEach(btn => {
-        btn.classList.remove('border-teal-400', 'text-teal-400');
-        btn.classList.add('text-slate-400', 'hover:text-slate-200');
+        btn.classList.remove('border-[#b89b72]', 'text-[#b89b72]');
+        btn.classList.add('text-[#8b6f47]', 'hover:text-[#5e4a3a]');
       });
-      event.target.classList.add('border-b-2', 'border-teal-400', 'text-teal-400');
-      event.target.classList.remove('text-slate-400', 'hover:text-slate-200');
+      event.target.classList.add('border-b-2', 'border-[#b89b72]', 'text-[#b89b72]');
+      event.target.classList.remove('text-[#8b6f47]', 'hover:text-[#5e4a3a]');
     }
 
     function showBookDetail(bookId) {
       const book = books[bookId];
       const detail = document.getElementById('book-detail');
       detail.innerHTML = `
-        <button onclick="document.getElementById('book-detail').classList.add('hidden')" class="flex items-center gap-2 text-teal-400 hover:text-teal-300 mb-6">
+        <button onclick="document.getElementById('book-detail').classList.add('hidden')" class="flex items-center gap-2 text-[#b89b72] hover:text-[#8b6f47] mb-6">
           ← Back to bookshelf
         </button>
         <div class="grid md:grid-cols-3 gap-8">
           <div>
-            <img src="${book.cover}" alt="${book.title} cover" class="w-full aspect-[2/3] object-cover rounded-lg shadow-2xl">
+            <img src="${book.cover}" alt="${book.title} cover" class="w-full aspect-[2/3] object-cover rounded-lg warm-shadow" style="filter: sepia(0.3);">
           </div>
           <div class="md:col-span-2 space-y-8">
             <div>
-              <h3 class="text-4xl font-light mb-3" style="color: #FBBF24;">${book.title}</h3>
-              <p class="text-2xl text-slate-300 mb-6">${book.author}</p>
-              <div class="flex flex-wrap gap-6 text-slate-400">
+              <h3 class="text-4xl font-light mb-3" style="color: #b89b72;">${book.title}</h3>
+              <p class="text-2xl text-[#4a3c2b] mb-6">${book.author}</p>
+              <div class="flex flex-wrap gap-6 text-[#8b6f47]">
                 <div>Published: ${book.published}</div>
                 <div>Read: ${book.read}</div>
                 <div class="flex items-center gap-1">
@@ -198,9 +217,9 @@
                 </div>
               </div>
             </div>
-            <div class="bg-slate-800 border border-slate-700 rounded-lg p-6">
-              <h4 class="text-xl font-medium mb-4" style="color: #34D399;">My Thoughts & Summary</h4>
-              <p class="text-slate-300 leading-relaxed">${book.thoughts}</p>
+            <div class="bg-[#f5f0e6] border border-[#e8dcc9] rounded-lg p-6 warm-shadow">
+              <h4 class="text-xl font-medium mb-4" style="color: #a9b2a3;">My Thoughts & Summary</h4>
+              <p class="text-[#4a3c2b] leading-relaxed">${book.thoughts}</p>
             </div>
           </div>
         </div>
