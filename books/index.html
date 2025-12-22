@@ -1,35 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-slate-900 text-slate-200 min-h-screen">
-
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nostem Koempassu - Books</title>  <!-- Customize per page, e.g., "About" -->
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nostem Koempassu - Books</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-  
+<body class="min-h-screen">
+  <header class="border-b border-slate-700">
+    <div class="max-w-7xl mx-auto px-6 py-8">
+      <h1 class="text-3xl font-light mb-6 text-teal-400" style="letter-spacing: 0.02em;">Nostem Koempassu</h1>
+      <nav class="flex gap-8">
+        <a href="/about.html" class="pb-2 capitalize transition-all text-slate-400 hover:text-slate-200">about</a>
+        <a href="/now.html" class="pb-2 capitalize transition-all text-slate-400 hover:text-slate-200">now</a>
+        <a href="/writing/" class="pb-2 capitalize transition-all text-slate-400 hover:text-slate-200">writing</a>
+        <a href="/books/" class="pb-2 capitalize transition-all border-b-2 border-teal-400 text-teal-400">books</a>
+      </nav>
+    </div>
+  </header>
 
-
-<body>
-<header class="border-b border-[#e8dcc9]">
-  <div class="max-w-7xl mx-auto px-6 py-8">
-    <h1 class="text-3xl font-light mb-6 text-[#b89b72]" style="letter-spacing: 0.02em;">Nostem Koempassu</h1>
-    <nav class="flex gap-8">
-      <a href="/about.html" class="pb-2 capitalize transition-all border-b-2 border-[#b89b72] text-[#b89b72]">about</a>  <!-- Adjust active class per page -->
-      <a href="/now.html" class="pb-2 capitalize transition-all text-[#8b6f47] hover:text-[#5e4a3a]">now</a>
-      <a href="/writing/" class="pb-2 capitalize transition-all text-[#8b6f47] hover:text-[#5e4a3a]">writing</a>
-      <a href="/books/" class="pb-2 capitalize transition-all text-[#8b6f47] hover:text-[#5e4a3a]">books</a>
-    </nav>
-  </div>
-</header>
-
-<main class="max-w-7xl mx-auto px-6 py-12">
-    <!-- Books Overview (grid of covers only) -->
-    <section>
-      <h2 class="text-3xl font-light mb-8" style="color: #E07A5F;">Bookshelf (2)</h2>
-
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <section class="space-y-10">
+      <h2 class="text-3xl font-light mb-8 text-orange-500">Bookshelf (2)</h2>
       <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
         <!-- Becoming Your Own Banker -->
         <button onclick="showBookDetail(1)" class="focus:outline-none">
@@ -47,13 +40,12 @@
         <!-- Content injected via JS -->
       </div>
     </section>
-</main>
-<script src="/assets/js/script.js"></script>
+  </main>
 
-<footer class="border-t border-[#e8dcc9] py-6 text-center text-[#8b6f47] text-sm">
-  © 2025 Nostem Koempassu. Built with curiosity.
-</footer>
+  <footer class="border-t border-slate-700 py-6 text-center text-slate-400 text-sm">
+    © 2025 Nostem Koempassu. Built with curiosity.
+  </footer>
 
-
-
+  <script src="/assets/js/script.js"></script>
+</body>
 </html>
