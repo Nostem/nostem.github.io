@@ -1,5 +1,5 @@
 const books = [
-  null, // placeholder
+  null, // placeholder (keeps indexing simple)
   {
     id: 1,
     title: "Becoming Your Own Banker",
@@ -21,6 +21,8 @@ const books = [
     thoughts: "Profound channeled material on unity, densities, and the nature of reality. One of the most impactful spiritual texts I've encountered."
   }
 ];
+
+books.sort((a, b) => (b ? b.read : 0) - (a ? a.read : 0));  // Add this for descending sort by read year
 
 function showBookDetail(bookId) {
   const book = books[bookId];
