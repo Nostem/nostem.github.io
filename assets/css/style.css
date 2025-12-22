@@ -1,1 +1,13 @@
-
+body { 
+  font-family: 'Libre Baskerville', serif; 
+  margin: 0; 
+  background-image: url('/assets/images/paper-texture.jpg');  /* Update to local path */
+  background-repeat: repeat; 
+  background-size: auto; 
+  opacity: 1; /* Adjust for subtlety if needed */
+}
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+/* Custom warm shadows */
+.warm-shadow { box-shadow: 0 4px 20px rgba(139, 111, 71, 0.2); }
+/* Dividers */
+hr.divider { border: 0; height: 1px; background: #e8dcc9; margin: 2rem 0; }
