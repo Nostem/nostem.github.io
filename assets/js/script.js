@@ -39,7 +39,7 @@ const books = [
     rating: 3,
     cover: "https://m.media-amazon.com/images/I/81dD6yByLeL._SL1500_.jpg",
     thoughts: "Walks you through the different metabolic types and what foods are optimal for each. Contains a questionnaire for determining your own metabolic type and provides detailed guidance on how to incorporate. Dense, but full of information. I've used it to look up various nutritional style questions."
-  },
+  }
 ];
 
 function showBookDetail(bookId) {
