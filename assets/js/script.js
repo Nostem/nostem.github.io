@@ -30,6 +30,16 @@ const books = [
     cover: "https://m.media-amazon.com/images/I/81qZ5kGMQ1L._SL1500_.jpg",
     thoughts: "Beautifully written. Eye-opening, brings us in touch with alternate timeline that isn't too distant from our own."
   }
+   {
+    id: 4,
+    title: "Metabolic Typing Diet",
+    author: "William Wolcott & Trish Fahey",
+    published: "2008",
+    read: 2014,
+    rating: 3,
+    cover: "https://m.media-amazon.com/images/I/81dD6yByLeL._SL1500_.jpg",
+    thoughts: "Walks you through the different metabolic types and what foods are optimal for each. Contains a questionnaire for determining your own metabolic type and provides detailed guidance on how to incorporate. Dense, but full of information. I've used it to look up various nutritional style questions."
+  }
 ];
 
 function showBookDetail(bookId) {
