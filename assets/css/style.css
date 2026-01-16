@@ -49,7 +49,7 @@ h1, h2, h3, h4 {
 .bookshelf-grid {
   display: flex;                    /* Horizontal row by default */
   flex-wrap: wrap;                  /* Wrap to next line on small screens */
-  justify-content: center;          /* Center the row */
+  justify-content: flex-start;      /* Left-align the row */
   gap: 1.5rem;                      /* Space between books */
   margin: 2rem 0;
   padding: 0;

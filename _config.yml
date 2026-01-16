@@ -14,8 +14,9 @@ collections:
     output: true
     permalink: /writing/:path/
   books:  # For book pages
-    output: true
+    output: false
     permalink: /books/:path/
+    sort_by: year_read  # Sort books by year read
 
 plugins:
   - jekyll-feed  # Optional: For RSS if you want
