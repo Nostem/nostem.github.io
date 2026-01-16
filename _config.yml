@@ -1,6 +1,6 @@
 title: Nostem Koempassu
 description: Exploring personal sovereignty, consciousness, and analog living.
-url: "https://nostem.github.io"  # Your GitHub Pages URL
+url: "https://github.com/nostem/nostem.github.io.git"  # Your GitHub Pages URL
 baseurl: ""  # Empty for root domain
 
 defaults:
