@@ -1,6 +1,6 @@
 ---
 title: "Unlimited Memory"
 author: "Kevin Horsley"
-cover_url: "https://m.media-amazon.com/images/I/51dYpWQMw6L._SY445_SX342_.jpg"
+cover_url: "https://covers.openlibrary.org/b/id/8230883-L.jpg"
 year_read: 2018
 ---
