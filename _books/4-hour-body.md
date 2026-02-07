@@ -1,6 +1,6 @@
 ---
 title: "The 4-Hour Body"
 author: "Timothy Ferriss"
-cover_url: "https://covers.openlibrary.org/b/isbn/9780307463630-M.jpg"
+cover_url: "https://images1.penguinrandomhouse.com/cover/9780307463630"
 year_read: 2019
 ---

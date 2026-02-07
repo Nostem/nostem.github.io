@@ -58,7 +58,7 @@ h1, h2, h3, h4 {
 
 .book {
   flex: 0 0 auto;                   /* Don't grow/shrink, keep natural size */
-  max-width: 220px;                 /* Caps width for consistency */
+  width: 140px;                     /* Fixed width for all books */
   text-align: center;
   background: transparent;          /* NO background tile/overlay */
   padding: 0;                       /* Remove all padding */
@@ -72,14 +72,13 @@ h1, h2, h3, h4 {
 }
 
 .book img {
-  width: 100%;
-  height: auto;
-  max-height: 320px;                /* Slightly taller to accommodate most covers without squishing */
-  object-fit: contain;              /* Preserve proportions, no cropping */
+  width: 140px;                     /* Fixed width */
+  height: 210px;                    /* Fixed height (standard book ratio ~2:3) */
+  object-fit: cover;                /* Fill the space, crop if needed */
   display: block;
   margin: 0 auto;
-  border-radius: 3px;               /* Very subtle rounding if desired — remove if you want sharp edges */
-  box-shadow: none; /* Soft natural shadow for depth, like real books on a shelf */
+  border-radius: 3px;               /* Very subtle rounding */
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.15); /* Subtle shadow for depth */
 }
 
 /* Title below the cover - typewriter style */
@@ -97,10 +96,11 @@ h1, h2, h3, h4 {
     gap: 1rem;
   }
   .book {
-    max-width: 160px;
+    width: 100px;
   }
   .book img {
-    max-height: 240px;
+    width: 100px;
+    height: 150px;
   }
 }
 
