@@ -1,6 +1,6 @@
 ---
 title: "Summoning the Demon"
 author: "Alan Didio"
-cover_url: "https://images.unsplash.com/photo-1535905557558-afc4877a26fc?w=800&q=80"
+cover_url: "https://m.media-amazon.com/images/I/81Hyab0cRQL._SL1500_.jpg"
 year_read: 2024
 ---
