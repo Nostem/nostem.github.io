@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import PageTransition from '@/components/layout/PageTransition';
-import HeroSection from '@/components/home/HeroSection';
-import NowSection from '@/components/home/NowSection';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import PageTransition from "@/components/layout/PageTransition";
+import HeroSection from "@/components/home/HeroSection";
+import NowSection from "@/components/home/NowSection";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
@@ -23,15 +23,21 @@ export default function HomePage() {
         >
           <Link href="/writing" className="link-card">
             <h3 className="!mt-0 !mb-2 text-xl">
-              Writing <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+              Writing{" "}
+              <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+                &rarr;
+              </span>
             </h3>
             <p className="text-[var(--color-text-muted)] text-[0.92rem] !mb-0">
-              Essays, poems, and thoughts in progress
+              Essays, poems, and field notes
             </p>
           </Link>
           <Link href="/books" className="link-card">
             <h3 className="!mt-0 !mb-2 text-xl">
-              Bookshelf <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+              Bookshelf{" "}
+              <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">
+                &rarr;
+              </span>
             </h3>
             <p className="text-[var(--color-text-muted)] text-[0.92rem] !mb-0">
               21 books across consciousness, sovereignty, and systems
@@ -47,13 +53,28 @@ export default function HomePage() {
         >
           <h3>Connect</h3>
           <div className="flex gap-4 flex-wrap mt-3">
-            <a href="https://x.com/TheAl_Mo" className="social-link" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://x.com/TheAl_Mo"
+              className="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               &#x1D54F; @TheAl_Mo
             </a>
-            <a href="https://github.com/Nostem" className="social-link" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/Nostem"
+              className="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               &#9881; GitHub
             </a>
-            <a href="https://nostem.substack.com" className="social-link" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://nostem.substack.com"
+              className="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               &#9993; Substack
             </a>
           </div>
