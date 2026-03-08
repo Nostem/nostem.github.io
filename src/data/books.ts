@@ -12,7 +12,7 @@ export const books: Book[] = [
     slug: 'eight-dates',
     title: 'Eight Dates: Essential Conversations for a Lifetime of Love',
     author: 'John Gottman',
-    coverUrl: 'https://m.media-amazon.com/images/I/51h5w9Q1oQL._SX342_.jpg',
+    coverUrl: 'https://covers.openlibrary.org/b/id/9165679-M.jpg',
     yearRead: 2025,
   },
   {
@@ -94,7 +94,7 @@ export const books: Book[] = [
     slug: 'multi-orgasmic-man',
     title: 'The Multi-Orgasmic Man: Sexual Secrets Every Man Should Know',
     author: 'Mantak Chia',
-    coverUrl: 'https://m.media-amazon.com/images/I/51xLQ7d8vML._SX342_.jpg',
+    coverUrl: 'https://covers.openlibrary.org/b/id/48653-M.jpg',
     yearRead: 2024,
   },
   {
