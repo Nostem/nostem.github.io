@@ -9,6 +9,13 @@ export const books: Book[] = [
     yearRead: 2026,
   },
   {
+    slug: 'eight-dates',
+    title: 'Eight Dates: Essential Conversations for a Lifetime of Love',
+    author: 'John Gottman',
+    coverUrl: 'https://m.media-amazon.com/images/I/51h5w9Q1oQL._SX342_.jpg',
+    yearRead: 2025,
+  },
+  {
     slug: 'becoming-your-own-banker',
     title: 'Becoming Your Own Banker',
     author: 'R. Nelson Nash',
@@ -81,6 +88,13 @@ export const books: Book[] = [
     slug: 'children-of-the-law-of-one',
     title: 'Children of the Law of One',
     coverUrl: 'https://m.media-amazon.com/images/I/41MG2ZGCA7L.jpg',
+    yearRead: 2024,
+  },
+  {
+    slug: 'multi-orgasmic-man',
+    title: 'The Multi-Orgasmic Man: Sexual Secrets Every Man Should Know',
+    author: 'Mantak Chia',
+    coverUrl: 'https://m.media-amazon.com/images/I/51xLQ7d8vML._SX342_.jpg',
     yearRead: 2024,
   },
   {
