@@ -2,6 +2,27 @@ import { Book } from '@/types';
 
 export const books: Book[] = [
   {
+    slug: 'generative-energy',
+    title: 'Generative Energy',
+    author: 'Ray Peat',
+    coverUrl: 'https://m.media-amazon.com/images/I/715SBtI0vML._SL1500_.jpg',
+    yearRead: 2026,
+  },
+  {
+    slug: 'kybalion',
+    title: 'The Kybalion',
+    author: 'Three Initiates',
+    coverUrl: 'https://m.media-amazon.com/images/I/61Uo686NuNL._SL1500_.jpg',
+    yearRead: 2026,
+  },
+  {
+    slug: 'secret-of-all-ages',
+    title: 'The Secret of All Ages',
+    author: 'Manly P. Hall',
+    coverUrl: 'https://m.media-amazon.com/images/I/71dhtfbXuyL._SL1329_.jpg',
+    yearRead: 2026,
+  },
+  {
     slug: '1913',
     title: '1913: In Search of the World Before the Great War',
     author: 'Charles Emmerson',
